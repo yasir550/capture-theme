@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.navbar {
+  background: #f67e7d;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 30vh 50vh 20vh;
+  position: sticky;
+  top: 0;
+}
+.logo {
+  display: grid;
+  justify-items: center;
+}
+.menu ul {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.menu > ul > li > a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.3em;
+  position: relative;
+}
+.menu > ul > li > a {
+  position: relative;
+}
+.menu > ul > li > a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: 0.4s linear;
+}
+.menu > ul > li > a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.social {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.social ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.social ul a i {
+  text-decoration: none;
+  color: black;
+  background: #ff9d76;
+  padding: 10px;
+  border-radius: 50%;
+}
+.main {
+  height: 400vh;
+  display: grid;
+  grid-template-rows: 5% 80% 15%;
+  justify-items: center;
+}
+.main-details {
+  width: 90%;
+  display: grid;
+  grid-template-rows: 20% 40% 40%;
+  align-items: center;
+}
+.main-link > a {
+  color: black;
+}
+.main-blog {
+  box-sizing: border-box;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 2fr 2fr 2fr .5fr;
+  grid-gap: 20px;
+}
+.blog-box {
+  display: grid;
+  align-content: space-between;
+}
+.blog-box img {
+  width: 100%;
+  height: 65%;
+}
+.sidebar {
+  box-sizing: border-box;
+  padding: 20px;
+  background: #f8f9fa;
+  grid-area: 1/3/5/4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 15% 24% 10% 15% 20% 3% 8%;
+  /* justify-items: center; */
+  /* grid-row-gap: 20px; */
+  align-content: space-around;
+}
+.siderbar form,
+.categories,
+.popular-articles,
+.archives,
+.tag-cloud,
+.newsletter {
+  width: 100%;
+}
+.sidebar > p {
+  width: 80%;
+}
+.sidebar .form{
+  text-align: center;
+  width: 100%;
+  outline: none;
+  position: relative;
+}
+.sidebar .form input{
+  width: 80%;
+  height: 45px;
+  outline: none;
+}
+.sidebar .form form i{
+  position: absolute;
+  right: 15%;
+  top: 18%;
+  cursor: pointer;
+}
+.categories {
+  display: grid;
+  align-content: space-around;
+}
+.categories > p {
+  width: 100%;
+  padding: 5% 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid;
+  justify-content: space-between;
+}
+.categories > p:nth-child(6) {
+  border: none;
+}
+.categories > p > span {
+  display: grid;
+  justify-content: end;
+}
+.popular-articles {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 10% 90%;
+  grid-column-gap: 15px;
+}
+.article-heading {
+  grid-column: 1/3;
+}
+.articles-left,
+.articles-right {
+  width: 100%;
+}
+.articles-left {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
+.articles-left img {
+  width: 100%;
+  height: 18%;
+}
+.articles-right {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.article-right-box > p {
+  width: 90%;
+}
+.tag-cloud {
+  display: grid;
+  align-content: space-around;
+}
+.tag-cloud .tag-cloud-box > p {
+  display: inline-block;
+  margin-top: 2%;
+  margin-right: 2%;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 0.5px solid gray;
+  border-radius: 5px;
+}
+.newsletter {
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("img/matterhorn.jpg");
+  background-size: 100% 100%;
+  display: grid;
+  align-content: space-around;
+  padding: 5%;
+  color: #f8f9fa;
+}
+.newsletter form input[type="email"] {
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  outline: none;
+  color: white;
+  border: 0.5px solid #f8f9fa;
+}
+.newsletter form input ::placeholder {
+  color: #f8f9fa;
+}
+.newsletter form input[type="submit"] {
+  margin-top: 3%;
+  width: 100%;
+  height: 45px;
+  border: none;
+  background: #f8f9fa;
+  font-size: 1em;
+}
+.archives {
+  display: grid;
+  align-content: space-around;
+}
+.archives > p {
+  width: 100%;
+  padding: 5% 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid;
+  justify-content: space-between;
+}
+.archives > p:nth-child(7) {
+  border: none;
+}
+.row-num{
+  display: grid;
+  grid-area: 5/1/6/3;
+  align-content: center;
+  justify-content: center;
+}
+.row-num ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr  1fr;
+  align-items: center;
+  grid-gap: 5px;
+  list-style: none;
+}
+.row-num ul li{
+  cursor: pointer;
+  text-align: center;
+  line-height: 2.5;
+   width: 40px;
+   height: 40px;
+   border: 1px solid #f67e7d;
+   border-radius: 50%;
+   color: #f67e7d;
+}
+.archives > p > span {
+  display: grid;
+  justify-content: end;
+}
+.sidebar > h3 {
+  align-self: start;
+}
+.footer {
+  background: #393e46;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+.footer-box {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer-box h2 {
+  color: whitesmoke;
+}
+.footer-box-1 {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer-box1 {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  border-bottom: 1px solid gray;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-box1 p {
+  color: gray;
+}
+.footer-last {
+  color: gray;
+  width: 100%;
+  height: 70%;
+  display: grid;
+  align-content: center;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: repeat(4, 1fr);
+}
+.footer-last-1 {
+  width: 100%;
+  height: 100%;
+}
+.footer-last-2 {
+  width: 100%;
+  height: 100%;
+}
+.footer-bottom p {
+  color: whitesmoke;
+  padding-left: 5%;
+  padding-top: 2%;
+}

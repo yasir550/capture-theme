@@ -1,0 +1,251 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.navbar{
+    background: #f67e7d;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 30vh 50vh 20vh;
+    position: sticky;
+    top: 0;
+}
+.logo{
+    display: grid;
+    justify-items: center;
+}
+.menu ul{
+    height: 70%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around; 
+   align-items: center;
+   list-style: none;
+}
+.menu > ul > li > a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+    position: relative;  
+}
+.menu > ul > li> a{
+    position: relative;
+}
+.menu > ul > li> a::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: .4s linear;
+}
+.menu > ul > li> a:hover::after{
+    visibility: visible;
+  transform: scaleX(1);
+}
+
+.social{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.social ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.social ul a i{
+    text-decoration: none;
+    color: black;
+    background: #ff9d76;
+    padding: 10px;
+    border-radius: 50%;
+}
+.main{
+    height: 270vh;
+    display: grid;
+    grid-template-rows: 10% 40% 25% 25%;
+    justify-items: center;
+    background: #eafbea;
+}
+.main-details
+{
+    width: 90%;
+    display: grid;
+    grid-template-rows: 20% 40% 40%;
+    align-items: center;
+}
+.main-link > a{
+    color: black;
+}
+.about-main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100vh;
+}
+.about-main-left{
+    width: 100%;
+    height: 100%;
+}
+.about-main-left img{
+    width: 100%;
+    height: 100%;
+}
+.about-main-right{
+    height: 100%;
+}
+.about-main-right-inner{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5%;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    right: 15%;
+    top: 10%;
+    background: white;
+    overflow: hidden;
+}
+.about-main-right-inner h1{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.about-main-right-inner p{
+    line-height: 1.6;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.about-main-right-inner .list{
+    width: 90%;
+}
+.list{
+    padding-left: 5%;
+}
+.list ul li{
+    line-height: 1.3;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.social1{
+    width: 90%;
+    padding-left: 5%;
+}
+.social1 ul{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.social1 ul li i{
+    color: black;
+    font-size: 1.5em;
+}
+.team{
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.team-box{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 55% 10% 10% 15% 15%;
+    align-items: center;
+}
+.team-box img{
+    height: 100%;
+    width: 100%;
+}
+.team-box ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    width: 60%;
+    justify-content: space-between;
+}
+.team-box ul li i{
+    color: black;
+}
+.footer{
+    background: #393e46;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+.footer-top{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+.footer-box{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.footer-box h2{
+    color: whitesmoke;
+}
+.footer-box-1{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.footer-box1{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    border-bottom: 1px solid gray;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-box1 p{
+    color: gray;
+}
+.footer-last{
+    color: gray;
+    width: 100%;
+    height: 70%;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: repeat(4, 1fr);
+}
+.footer-last-1{
+    width: 100%;
+    height: 100%;
+}
+.footer-last-2{
+    width: 100%;
+    height: 100%;
+}
+.footer-bottom p{
+    color: whitesmoke;
+    padding-left: 5%;
+    padding-top: 2%;
+}

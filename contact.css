@@ -1,0 +1,225 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.navbar{
+    background: #f67e7d;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 30vh 50vh 20vh;
+    position: sticky;
+    top: 0;
+}
+.logo{
+    display: grid;
+    justify-items: center;
+}
+.menu ul{
+    height: 70%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around; 
+   align-items: center;
+   list-style: none;
+}
+.menu > ul > li > a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+    position: relative;  
+}
+.menu > ul > li> a{
+    position: relative;
+}
+.menu > ul > li> a::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: .4s linear;
+}
+.menu > ul > li> a:hover::after{
+    visibility: visible;
+  transform: scaleX(1);
+}
+
+.social{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.social ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.social ul a i{
+    text-decoration: none;
+    color: black;
+    background: #ff9d76;
+    padding: 10px;
+    border-radius: 50%;
+}
+.main{
+    height: 200vh;
+    display: grid;
+    grid-template-rows: 10% 60% 30%;
+    justify-items: center;
+    background: #F8F9FA;
+}
+.main-details
+{
+    width: 90%;
+    display: grid;
+    grid-template-rows: 20% 40% 40%;
+    align-items: center;
+}
+.main-link > a{
+    color: black;
+}
+.contact-info{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10% 18% 72%;
+    grid-template-areas: 
+    "heading heading"
+    "details details"
+    "map form";
+    grid-gap: 20px;
+}
+.contact-heading{
+    grid-area: heading;
+    align-self: center;
+}
+.contact-details{
+    grid-area: details;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+    grid-column-gap: 10px;
+}
+.contact-detail-box{
+    background: #f67e7d;
+    box-sizing: border-box;
+    padding: 3%;
+}
+.contact-detail-box >p{
+    padding-top: 5%;
+}
+.contact-map{
+    background: #F8F9FA;
+    grid-area: map;
+}
+.contact-map img{
+    width: 100%;
+    height: 85%;
+}
+.contact-form{
+    background: #F8F9FA;
+    height: 90%;
+    padding-left: 5%;
+    grid-area: form;
+    display: grid;
+
+}
+.contact-form form{
+    display: grid;
+    align-content: space-evenly;
+}
+.contact-form form textarea{
+    width: 90%;
+}
+.contact-form input{
+    width: 90%;
+    height: 50px;
+}
+.contact-form button{
+    width: 50%;
+    padding: 5%;
+    background: #f67e7d;
+    border-radius: 30px;
+    color: whitesmoke;
+    font-size: 1em;
+    border: none;
+}
+.footer{
+    background: #393e46;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+.footer-top{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+.footer-box{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.footer-box h2{
+    color: whitesmoke;
+}
+.footer-box-1{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.footer-box1{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    border-bottom: 1px solid gray;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-box1 p{
+    color: gray;
+}
+.footer-last{
+    color: gray;
+    width: 100%;
+    height: 70%;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: repeat(4, 1fr);
+}
+.footer-last-1{
+    width: 100%;
+    height: 100%;
+}
+.footer-last-2{
+    width: 100%;
+    height: 100%;
+}
+.footer-bottom p{
+    color: whitesmoke;
+    padding-left: 5%;
+    padding-top: 2%;
+}
